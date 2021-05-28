@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+
+    <link rel="stylesheet" href="style/css/style.css">
+    <title>Solo Quiz</title>
+  </head>
+  <body id="my-scrollbar">
+
+    <header>
+        <img src="assets/logo/soloquiz.svg" alt="Solo Quiz Logo" id="logo">
+        <nav>
+          <!-- Desktop Nav -->
+          <ul class="nav-list">
+              <li class="nav-item">
+                  <a class="nav-link" href="">HTML</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="">CSS</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="">JAVASCRIPT</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" id="sign-up-nav-btn" href="">SIGN UP</a>
+              </li>
+          </ul>
+          <!-- Tablet/Small screen Nav -->
+          <button id="hamburger-btn-lp">
+            <svg id="hamburger-nav-lp" width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="1" y1="1" x2="29" y2="1" stroke="#28C9AC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="11" y1="9" x2="29" y2="9" stroke="#28C9AC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="11" y1="17" x2="29" y2="17" stroke="#28C9AC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg id="cross-nav-lp" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.10049 21.8995L21.8995 2.10049" stroke="#28C9AC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21.799 21.799L1.99999 2.00002" stroke="#28C9AC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>                           
+          </button>
+
+          <aside id="sidebar" class="sidebarInactive">
+            <nav id="sidebar-nav">
+              <ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="">HTML</a>
+                  <div class="borderBottom"></div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">CSS</a>
+                    <div class="borderBottom"></div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">JAVASCRIPT</a>
+                    <div class="borderBottom"></div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">SIGN UP</a>
+                    <div class="borderBottom"></div>
+                  </li>
+              </ul>
+            </nav>
+          </aside>
+        </nav>
+    </header>
+
+    <section id="landing-page-content">
+        <main>
+            <h1 id="headline">Test your <span>web-design</span> knowledge!</h1>
+            <p id="sub-headline">Through a selection of HTML, CSS and JavaScript quizzes.</p>
+        </main>
+        <figure>
+            <div id="threeJsObject"></div>
+        </figure>
+    </section>
+
+    <div id="scroll-icon-container">
+        <span>SCROLL</span>
+        <img src="assets/scroll gif/mouse.svg" alt="scroll-down indicator" id="scroll-mouse">
+        <img src="assets/scroll gif/arrow.svg" alt="scroll-down indicator" id="scroll-arrow">
+    </div>
+
+    <div id="root"></div>
+
+    <!-- Three JS / CodeBlock -->
+    <script src="three/build/three.js"></script>
+    <script type="module" src="three/examples/js/loaders/GLTFLoader.js"></script>
+    <script type="module" src="js/codeBlock.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

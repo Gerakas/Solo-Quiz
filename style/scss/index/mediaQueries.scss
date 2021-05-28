@@ -1,0 +1,93 @@
+.sidebarIconFadeOut {
+  animation: fadeOut 0.5s forwards;
+}
+
+.sidebarIconFadeIn {
+  animation: fadeIn 0.5s forwards;
+}
+
+@media screen and (max-width: 900px) {
+  // Header
+  header {
+    nav {
+      .nav-list {
+        display: none;
+      }
+      #hamburger-nav-lp {
+        display: block;
+      }
+      #cross-nav-lp {
+        display: block;
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+    }
+  }
+
+  // Information and Canvas
+  #landing-page-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    width: 100vw;
+    margin: 10vh 0;
+
+    main {
+      align-items: center;
+      width: 80%;
+
+      h1,
+      p {
+        text-align: center;
+      }
+    }
+    figure {
+      width: 100%;
+    }
+  }
+
+  #scroll-icon-container {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #sidebar-nav {
+    .nav-item {
+      .nav-link {
+        font-size: 1rem;
+        font-size: 5vmin;
+      }
+    }
+  }
+
+  #sidebar {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #landing-page-content {
+    main {
+      align-items: flex-start;
+      h1,
+      p {
+        text-align: left;
+      }
+    }
+  }
+
+  #sidebar {
+    width: 100vw;
+
+    ul {
+      .nav-item {
+        .nav-link {
+          font-size: 2rem;
+          font-size: 10vw;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,220 @@
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+// Landing page
+// Header
+
+header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 5%;
+
+  nav {
+    display: flex;
+    align-items: center;
+
+    button,
+    button:focus {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      width: 2rem;
+      height: 2rem;
+      z-index: 15;
+      position: relative;
+
+      svg:focus {
+        outline: none;
+      }
+    }
+  }
+
+  #hamburger-nav-lp {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  #cross-nav-lp {
+    display: none;
+    width: 80%;
+    height: 80%;
+    top: 0;
+    right: 0;
+  }
+
+  .nav-list {
+    display: flex;
+
+    .nav-item {
+      list-style: none;
+      margin: 0 25px;
+
+      .nav-link {
+        text-decoration: none;
+        color: #28c9ac;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.07rem;
+      }
+
+      #sign-up-nav-btn {
+        color: #ffffff;
+        border: 1px solid #28c9ac;
+        border-radius: 25px;
+        padding: 7px 25px;
+        background-color: #28c9ac;
+      }
+    }
+  }
+
+  aside {
+    height: 200vh;
+    width: 50vw;
+    background-color: #fff;
+    border-left: 1px solid #28c9ac;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+  }
+
+  #sidebar-nav {
+    width: 100%;
+    height: 50%;
+    position: relative;
+
+    ul {
+      position: absolute;
+      left: 20%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-item {
+      list-style: none;
+      margin: 4vh 0;
+    }
+
+    .nav-item:hover {
+      animation: sidebarNavLinkMoveRight 0.25s forwards;
+      div:nth-child(2) {
+        animation: borderBottomAnim 0.25s forwards;
+      }
+    }
+
+    .nav-item:not(:hover) {
+      animation: sidebarNavLinkMoveLeft 0.25s forwards;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: #28c9ac;
+      font-weight: 700;
+      font-size: 24px;
+      letter-spacing: 0.07rem;
+    }
+
+    .borderBottom {
+      border-bottom: 4px solid #28c9ac;
+      position: absolute;
+      right: 100%;
+      left: 0;
+    }
+  }
+
+  .sidebarInactive {
+    right: -100vw;
+  }
+  .sidebarActiveMoveLeft {
+    animation: sidebarMoveLeft 0.4s forwards;
+  }
+  .sidebarActiveMoveRight {
+    animation: sidebarMoveRight 0.4s forwards;
+  }
+}
+
+// Information and Canvas
+#landing-page-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20px;
+  width: 1000px;
+  min-width: 80vw;
+  margin: 0 auto;
+  height: 90vh;
+
+  main {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 400;
+      margin-bottom: 5vh;
+
+      span {
+        font-weight: 800;
+      }
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: normal;
+      color: #888888;
+      width: 80%;
+    }
+  }
+
+  figure {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+#scroll-icon-container {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    margin-bottom: 5px;
+  }
+
+  #scroll-mouse {
+    max-height: 50px;
+    width: auto;
+  }
+
+  #scroll-arrow {
+    width: 30px;
+    height: auto;
+    animation: scrollIndicator 3s infinite;
+  }
+}
+
+// Course Cards
+
+#root {
+  max-width: 100%;
+  background-color: #f0f7f5;
+  padding: 5vh 0;
+}
